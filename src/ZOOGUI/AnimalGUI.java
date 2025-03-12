@@ -10,24 +10,24 @@ public class AnimalGUI{
     {
         //creates window (JFrame)
         JFrame window = new JFrame();
-        window.setSize(800 ,200);
+        window.setSize(500 ,500);
         window.setTitle("Philadelphia Zoo");
         //window.setIconImage("");
         window.getContentPane().setBackground(new Color(244, 244, 233));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel header = new JPanel();
-        header.setSize(800, 50);
+        header.setSize(500, 50);
         header.setBackground(new Color(255,255,244));
         window.add(header);
 
         JLabel header_icon = new JLabel(" ");
-        ImageIcon header_logo = new ImageIcon("src/ZOOGUI/zoo_blacklogo.png");
+        ImageIcon header_logo = new ImageIcon("src/ZOOGUI/images/zoo_blacklogo.png");
         header_icon.setIcon(header_logo);
         header_icon.setHorizontalAlignment(SwingConstants.CENTER);
         header_icon.setVerticalAlignment(SwingConstants.CENTER);
         header.add(header_icon);
-        int NumberFact = new Random().nextInt(0,11);
+        int NumberFact = new Random().nextInt(0,10);
         String[] foxFacts = {
                 "Foxes use the Earth's magnetic field to hunt.",
                 "Foxes can leap up to 3 meters (10 feet) high and are excellent climbers.",
@@ -41,14 +41,14 @@ public class AnimalGUI{
                 "Each fox has a unique scent, similar to fingerprints in humans."
         };
         String funfact = foxFacts[NumberFact];
-        JLabel label = new JLabel("Did you know?: " + funfact);
-        ImageIcon logo = new ImageIcon("zoo_blacklogo.png");
+        JLabel label = new JLabel("<html>Did you know?:<br> " + funfact + "</html>");
+        ImageIcon logo = new ImageIcon("src/ZOOGUI/images/window-background.png");
         label.setIcon(logo);
         label.setFont(new Font("Montserrat", Font.BOLD, 14));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setVerticalAlignment(SwingConstants.CENTER);
         label.setHorizontalTextPosition(SwingConstants.CENTER);
-        label.setVerticalTextPosition(SwingConstants.TOP);
+        label.setVerticalTextPosition(SwingConstants.CENTER);
         window.add(label);
 
 
